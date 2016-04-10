@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	$('form').on('submit', function(event) {
+	$('form').on('submit', function(e) {
 		event.preventDefault();
 
 		var inputNumber = $('.input-box').val()
@@ -17,12 +17,20 @@ for (var i = 1; i <= inputNumber; i++) {
 		$('.fizzbuzz').append('<li>Fizz</li>');
 	}
 	else if (i%5===0) {
-		$('.fizzbuzz').append('<li>FizzBuzz</li>');
+		$('.fizzbuzz').append('<li>Buzz</li>');
 	}
 	else {
 		$('.fizzbuzz').append('<li>' + i + '</li>');
 	}
 };
+var clean = function () {
+		$('ul').remove();
+	}
+
+if (num % 1 != 0 && num !==NaN) {
+	clean();
+	alert("Must use whole number");
+}
 
 });
 
